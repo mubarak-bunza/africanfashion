@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-left: 1rem;
+}
+
+/* --------- header --------- */
+.url::before {
+    content: 'AFRICANQUEENFASHIONS.COM';
+}
+.support::before {
+    content: 'support women business';
+}
+header {
+    background-color: rgb(156, 39, 176);
+    color: #fff;
+}
+nav {
+    height: 14vh;
+    padding: 1rem 0;
+    width: 95%;
+    margin: 0 auto;
+}
+
+nav .top {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+nav .bottom {
+    font-size: 1.2em;
+    line-height: 1rem;
+}
+
+nav .bottom .logo{
+    align-items: center;
+}
+
+nav .bottom .menu ul li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 20px;
+    
+}
+
+nav .bottom .menu ul li:first-child{
+    border-bottom: 2px solid white;
+}
+
+/* -------- media query ---------- */
+@media screen and (max-width: 767px) {
+    .support::before {
+        content: 'support women';
+    }
+    nav .top {
+        margin-bottom: .5rem;
+    }
+    nav .bottom .menu .hide{
+        display: none;
+    }
+    nav .top {
+        justify-content: space-between;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .support::before {
+        content: 'support';
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+      background-color: blue;
+    }
+    .url::before {
+        content: '';
+    }
+    nav .top {
+        flex-direction: column;
+    }
+    .support::before {
+        content: 'support women business';
+    }
+    
+}
