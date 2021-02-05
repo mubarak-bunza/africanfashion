@@ -8,7 +8,17 @@ body {
     font-size: 14px;
     box-sizing: border-box;
 }
-
+input, input:active {
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
 .d-flex {
     display: flex;
     justify-content: space-between;
@@ -63,6 +73,7 @@ nav {
 
 nav .top {
     justify-content: center;
+    width: 100%;
     margin-bottom: 1.2rem;
 }
 
@@ -84,7 +95,9 @@ nav .bottom .menu ul li{
 nav .bottom .menu ul li:first-child{
     border-bottom: 2px solid white;
 }
-
+nav .bottom .menu .hamburger {
+    display: none;
+}
 header .desc{
     /* width: 100%; */
     height: 100vh;
@@ -194,8 +207,17 @@ footer .top, footer .bottom {
         justify-content: center;
         margin-bottom: 3rem;
     }
-    nav .bottom .menu .hide{
+    /* nav .bottom .menu .hide{
         display: none;
+    }
+    nav .bottom .menu .hamburger {
+        display: block;
+    } */
+    .show {
+        display: none;
+    }
+    .hide {
+        display: block;
     }
     nav .top {
         justify-content: space-between;
@@ -270,17 +292,12 @@ footer .top, footer .bottom {
 }
 @media screen and (max-width: 414px) {
     nav {
-        height: 18vh;
+        height: 15vh;
     }
 }
 
 @media screen and (max-width: 375px) {
     nav {
-        height: 18vh;
-    }
-}
-@media screen and (max-height: 667px) {
-    nav {
-        height: 20vh;
+        height: 15vh;
     }
 }

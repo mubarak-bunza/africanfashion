@@ -1,0 +1,12 @@
+header {
+    background-image: url('../images/david-dvoracek-12P0_rzSNpM-unsplash.jpg');
+
+}
+
+footer .divider {
+    padding: 3rem 0;
+}
+footer .divider p {
+    color: rgba(156,39,176,1);
+    margin-top: 20px;
+}

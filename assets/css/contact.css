@@ -1,0 +1,8 @@
+header {
+    background-image: url('../images/priscilla-du-preez-my5cwTzhmNI-unsplash.jpg');
+
+}
+
+header .desc {
+    justify-content: center;
+}
