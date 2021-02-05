@@ -6,6 +6,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 .d-flex {
@@ -13,8 +14,16 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.container {
+.img-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-container {
     width: 90%;
+    margin: 0 auto;
+}
+.container {
+    width: 85%;
     margin: 0 auto;
 }
 a {
@@ -37,19 +46,24 @@ a {
     content: 'support women business';
 }
 header {
-    background-color: rgb(156, 39, 176);
+    background-image: url('../images/marcus-loke-xXJ6utyoSw0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
     color: #fff;
+    height: 100vh;
 }
 nav {
-    height: 14vh;
-    padding: 1rem 0;
-    width: 95%;
-    margin: 0 auto;
+    background-color: rgba(156, 39, 176, .6);
+    padding: .5rem 0 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    height: 12vh;
 }
 
 nav .top {
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 nav .bottom {
@@ -67,18 +81,118 @@ nav .bottom .menu ul li{
     margin-left: 20px;
     
 }
-
 nav .bottom .menu ul li:first-child{
     border-bottom: 2px solid white;
 }
 
+header .desc{
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-content: center; */
+    align-content: center;
+    /* background-color: turquoise; */
+    margin-left: 2rem;
+    padding-top: 40px;
+    text-align: center;
+}
+
+header .desc .inner-desc {
+    width: 450px;
+}
+
+/* -------- main -------- */
+main .divider {
+    color: rgba(156,39,176,1);
+    background-color: rgb(245, 236, 236);
+    padding: 3rem 0;
+    text-align: center;
+    word-break: break-all;
+}
+main p {
+    text-align: center;
+    padding-top: 10px;
+}
+main .title {
+    color: rgba(156,39,176,1);
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5rem;
+}
+main .btn {
+    border: unset;
+    background-color: rgba(156,39,176,1);
+    color: #fff;
+    width: 100%;
+    margin: unset;
+    border-radius: unset;
+    margin-top: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+main .btn:hover {
+    background-color: rgba(156, 39, 176, .8);
+}
+main .clothes {
+    padding: 3rem 0;
+}
+main .clothes .container .img {
+    height: 400px;
+    width: 25%;
+}
+main .clothes .container .img:nth-child(2) {
+    width: 40%;
+}
+
+main .boutique {
+    padding: 3rem 0;
+
+}
+main .boutique .container .img {
+    width: 22%;
+    min-height: 500px;
+    margin-bottom: 2.5rem;
+}
+
+main .clothes-two-in-one {
+    padding: 3rem 0;
+}
+main .clothes-two-in-one .container .img {
+    width: 30%;
+    /* height: 600px; */
+    margin-bottom: 2.5rem;
+    /* background-color: yellow; */
+}
+/* -------- footer ---------- */
+footer {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+footer .divider {
+    padding: 1.6rem 0;
+}
+footer .divider .container .btn {
+    background-color: rgba(156,39,176,1);
+    margin-left: unset;
+    padding: .8rem 2rem;
+}
+footer .top, footer .bottom {
+    padding: 2rem 0;
+    background-color: rgb(65, 61, 61);
+}
 /* -------- media query ---------- */
 @media screen and (max-width: 767px) {
     .support::before {
         content: 'support women';
     }
     nav .top {
-        margin-bottom: .5rem;
+        justify-content: center;
+        margin-bottom: 3rem;
     }
     nav .bottom .menu .hide{
         display: none;
@@ -86,8 +200,49 @@ nav .bottom .menu ul li:first-child{
     nav .top {
         justify-content: space-between;
     }
+    header .desc {
+        color: rgb(248, 248, 252);
+    }
+    header .desc .inner-desc .hide-logo {
+        display: none;
+    }
+    /* --- main ---- */
+    main .divider {
+        font-size: .6rem;
+    }
+    .img-flex {
+        flex-wrap: wrap;
+    }
+    main .title {font-size: 1rem;}
+    main .clothes .container .img {
+        height: auto;
+        width: 70%;
+    }
+    main .clothes .container .img:nth-child(2) {
+        width: 80%;
+    }
+    main .boutique .container .img {
+        width: 80%;
+        min-height: 500px;
+        margin-bottom: 1.5rem;
+    }
 
+    main .clothes-two-in-one .container .img {
+        width: 80%;
+        /* height: 600px; */
+        margin-bottom: 2.5rem;
+        /* background-color: yellow; */
+        
+    }
+    footer {
+        text-align: center;
+        font-size: .8rem;
+    }
+    footer .d-flex {
+        flex-direction: column;
+    }
 }
+
 @media screen and (max-width: 600px) {
     .support::before {
         content: 'support';
@@ -95,17 +250,37 @@ nav .bottom .menu ul li:first-child{
 }
 
 @media screen and (max-width: 480px) {
-    body {
-      background-color: blue;
-    }
+    
     .url::before {
         content: '';
     }
     nav .top {
         flex-direction: column;
+        margin-bottom: .5rem;
     }
     .support::before {
         content: 'support women business';
     }
-    
+    nav .top {
+        text-align: center;
+    }
+    nav .top p {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 414px) {
+    nav {
+        height: 18vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    nav {
+        height: 18vh;
+    }
+}
+@media screen and (max-height: 667px) {
+    nav {
+        height: 20vh;
+    }
 }
